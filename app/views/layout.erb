@@ -1,13 +1,107 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+    <!--<head>-->
+          <!--<link rel="stylesheet" href="/style.css">-->
+          <!--<link rel="stylesheet" href="/css/bootstrap.css">-->
+          <!--<title>My Sinatra Application</title>-->
+    <!--</head>-->
+
+    <!--<body>-->
+          <!--<div class="container">-->
+            <!--<%= yield %>-->
+          <!--</div>-->
+    <!--</body>-->
+<!--</html>-->
+
+
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="en" class="no-js">
 <head>
-  <link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" href="/css/bootstrap.css">
-  <title>My Sinatra Application</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="/css/reset.css"> <!-- CSS reset -->
+  <link rel="stylesheet" href="/style.css"> <!-- Gem style -->
+  <script src="/js/modernizr.js"></script> <!-- Modernizr -->
+
+  <title>Log In &amp; Sign Up Form</title>
 </head>
+
 <body>
-  <div class="container">
-    <%= yield %>
-  </div>
+    <header role="banner">
+      <div id="cd-logo"><a href="#0"><img src="/img/cd-logo.svg" alt="Logo"></a></div>
+      <nav class="main-nav">
+        <ul>
+          <li><a class="task-index" href="/tasks">Task Index</a></li>
+          <li><a class="new-task" href="/tasks/new">New Task</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+
+    <!--<div class="cd-user-modal"> &lt;!&ndash; this is the entire modal form, including the background &ndash;&gt;-->
+      <!--<div class="cd-user-modal-container"> &lt;!&ndash; this is the container wrapper &ndash;&gt;-->
+        <!--<ul class="cd-switcher">-->
+          <!--<li><a href="/tasks">Task Index</a></li>-->
+          <!--<li><a href="/tasks/new">New Task</a></li>-->
+        <!--</ul>-->
+
+        <!--<div id="cd-login"> &lt;!&ndash; log in form &ndash;&gt;-->
+          <!--<form class="cd-form">-->
+            <!--<p class="fieldset">-->
+              <!--<label class="image-replace cd-email" for="signin-email">E-mail</label>-->
+              <!--<input class="full-width has-padding has-border" id="signin-email" type="text" placeholder="E-mail">-->
+              <!--<span class="cd-error-message">Error message here!</span>-->
+            <!--</p>-->
+
+            <!--<p class="fieldset">-->
+              <!--<label class="image-replace cd-password" for="signin-password">Password</label>-->
+              <!--<input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="Password">-->
+              <!--<a href="#0" class="hide-password">Hide</a>-->
+              <!--<span class="cd-error-message">Error message here!</span>-->
+            <!--</p>-->
+
+            <!--<p class="fieldset">-->
+              <!--<input class="full-width" type="submit" value="Login">-->
+            <!--</p>-->
+          <!--</form>-->
+
+          <!--<p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>-->
+          <!--&lt;!&ndash; <a href="#0" class="cd-close-form">Close</a> &ndash;&gt;-->
+        <!--</div> &lt;!&ndash; cd-login &ndash;&gt;-->
+
+        <!--<div id="cd-signup"> &lt;!&ndash; sign up form &ndash;&gt;-->
+          <!--<form class="cd-form">-->
+            <!--<p class="fieldset">-->
+              <!--<label class="image-replace cd-username" for="signup-username">Username</label>-->
+              <!--<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Task">-->
+              <!--<span class="cd-error-message">Error message here!</span>-->
+            <!--</p>-->
+
+            <!--<p class="fieldset">-->
+              <!--<label class="image-replace cd-email" for="signup-email">E-mail</label>-->
+              <!--<input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="Description">-->
+              <!--<span class="cd-error-message">Error message here!</span>-->
+            <!--</p>-->
+
+            <!--<p class="fieldset">-->
+              <!--<input class="full-width has-padding" type="submit" value="Submit">-->
+            <!--</p>-->
+          <!--</form>-->
+
+          <!--&lt;!&ndash; <a href="#0" class="cd-close-form">Close</a> &ndash;&gt;-->
+        <!--</div> &lt;!&ndash; cd-signup &ndash;&gt;-->
+      <!--</div>-->
+    <!--</div>-->
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="/js/main.js"></script> <!-- Gem jQuery -->
 </body>
 </html>

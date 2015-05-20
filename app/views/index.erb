@@ -1,5 +1,18 @@
 <h1>All Tasks</h1>
 
-<% @tasks.each do |task| %>
-  <h3><%= task.id %>: <a href="/tasks/<%= task.id %>"><%= task.title %></a></h3>
-<% end %>
+<section id="task-list-items">
+  <% @tasks.each do |task| %>
+    <h3>
+      <%= task.id %>: <a href="/tasks/<%= task.id %>"><%= task.title %></a>
+    </h3>
+    <a href="/tasks/<%= task.id %>/edit">Edit</a>
+    <form action="/tasks/<%= task.id %>" method="POST">
+      <input type="hidden" value="DELETE" name="_method">
+      <input type="submit" value="Delete">
+    </form>
+  <% end %>
+</section>
+
+
+
+<!--Line 10 -- the only way in Sinatra to handle this overridden behavior is to make it a form-->
